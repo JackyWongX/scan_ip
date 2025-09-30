@@ -31,7 +31,7 @@ if __name__ == '__main__':
     # 假设子网掩码为24位
     net = ipaddress.ip_network(local_ip + '/24', strict=False)
     used, unused = scan_network(net)
-    print('已使用IP:')
+    print(f'已使用IP: {len(used)}')
     print('\n'.join(used))
-    print('未使用IP:')
+    print(f'未使用IP: {len(unused)}')
     print('\n'.join(unused))
